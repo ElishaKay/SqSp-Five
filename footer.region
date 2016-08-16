@@ -18,6 +18,14 @@
 		          {.end}
 		        {.end}
 		        <squarespace:block-field id="footer-blocks" columns="12" label="Footer Content" />
+		        <div id="now-badge" class="now-badge">
+              <a href="http://www.nowstreamingservices.com" target="_blank">
+                <p class="now-badge-content">
+                  Powered by
+                  <img src="http://static1.squarespace.com/static/54bed0f2e4b03b6dc2fa610c/t/572a3d41b6aa60fe011e3ea6/1462385985209/NOW+logo.png" alt="Now Streaming Services" />
+                </p>
+              </a>
+            </div>
 		      </div>
 		    </div><!-- page-footer-wrapper -->
 

@@ -1,1 +1,142 @@
 // Add Custom Code Here
+
+/* TABS */
+.liveWrapper {
+    margin: 0 auto;
+    min-height: 400px;
+    
+    .tabSidebar {
+        float: left;
+        width: 49%;
+        padding-right: 1%;
+    }
+    
+    .liveTabsWrapper {
+        display: inline-block;
+        width: 49%;
+        padding-left: 1%;
+    }
+}
+ul.liveTabs {
+    list-style: none;
+    display: block;
+    padding: 2px;
+    text-align: center;
+    
+    li {
+        display: inline-block;
+        text-align: center;
+        .tabsFont;
+        
+        &.active a {
+            outline: none;
+            color: @tabsFontActive;
+            
+            .tabIcon {
+                outline: none;
+                background: @tabActiveBackColor;
+            }
+            
+            &:focus, &:active, &:hover {
+                outline: none;
+            }
+        }
+        
+        a {
+            outline: none;
+            color: @tabsFontColor;
+            
+            .tabIcon {
+                outline: none;
+                padding: 15px;
+                background: @tabBackColor;
+                border-top-left-radius: 10px;
+                border-top-right-radius: 10px;
+                cursor: pointer;
+                height: 48px;
+                width: 48px;
+                
+                &:hover {
+                    background: @tabHoverBackColor;
+                }
+            }
+            
+            &:hover {
+                outline: none;
+                color: @tabsFontActive;
+            }
+            
+            &:focus, &:active {
+                outline: none;
+            }
+        }
+    }
+}
+
+/* Accordion styles
+-------------------------------------------------*/ 
+.accElement {
+    padding: 2em 0;
+    border-bottom: 1px solid #EDEEEE;
+    position: relative;
+    color: @accHeading4Color;
+    background: @accBgColor;
+    
+    &:after {
+        font-family: 'squarespace-ui-font';
+        -webkit-font-smoothing: antialiased;
+        content: "\e02d";
+        position: absolute;
+        top: 2em;
+        right: 1em;
+        font-size: 1em;
+        font-weight: bold;
+        -webkit-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+        transform: rotate(90deg);
+        cursor: pointer;
+    }
+}
+.flipButton:after {
+    -webkit-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+    transform: rotate(270deg);
+}
+.accQuestion {
+		.accHeading4-font;
+    cursor: pointer;
+    margin: 0;
+    padding-right: 2em;
+}
+.accAnswer {
+    margin: 0;
+    max-height: 0;
+    overflow-y: hidden;
+    -webkit-transition: all .25s;
+    -moz-transition: all .25s;
+    transition: all .25s;
+    -webkit-transition-timing-function: ease-out;
+    -moz-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+    padding-right: 2em;
+}
+.activeAccAnswer {
+    margin-top: 1.5em;
+    max-height: none;
+}
+/* Now Badge */
+.now-badge {
+  text-align: center;
+  a {
+    text-decoration: none;
+  }
+  &-content {
+    font-size: 0.9em;
+    font-style: italic;
+    img {
+      height: 25px;
+      width: auto;
+      vertical-align: middle;
+    }
+  }
+}

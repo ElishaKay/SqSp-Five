@@ -1,0 +1,37 @@
+<style>
+    .hide-page-title .title-desc-wrapper.no-description {
+        display: none;
+    }
+</style>
+
+<!-- To fix sizing issue on mobile -->
+<style>
+  @media only screen and (max-width: 640px) { h1 {font-size:2em; word-wrap:normal;}}
+</style>
+<!-- COLLAPSIBLE TEXT WITH OPEN ALL/CLOSE ALL LINK -->
+<squarespace:block-field id="accordion-{collection.id}" label="Title Area" columns="12" />
+<div class="accBlock">
+    <div class="expandingAcc">
+        {.repeated section items}
+        <div class="accElement">
+            <h4 class="accQuestion" >
+                {title}
+            </h4>
+            <div class="accAnswer">
+                {body}
+            </div>
+        </div>
+        {.end}
+    </div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $('.accElement').click(function() {
+            $parent_box = $(this);
+            $parent_box.find('.accAnswer').toggleClass('activeAccAnswer');
+            $parent_box.toggleClass('flipButton');
+        });
+});
+</script>

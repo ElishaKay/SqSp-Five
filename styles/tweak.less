@@ -1,0 +1,56 @@
+/* TABS
+---------------------------------------------------*/
+
+// tweak: { "type" : "font", "category" : "Tabs", "title" : "Tab Font", "target" : "ul.tabs li", "showOnlyWhenPresent" : "ul.liveTabs .dontShow" }
+.tabsFont {
+  font-family: 'Julius Sans One', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1.25em;
+  letter-spacing: 0em;
+  text-transform: none;
+}
+
+// tweak: { "type" : "color", "category" : "Tabs", "title" : "Tab Font Color", "target" : "ul.tabs li", "showOnlyWhenPresent" : "ul.liveTabs .dontShow" }
+@tabsFontColor: #e6e6e6;
+
+// tweak: { "type" : "color", "category" : "Tabs", "title" : "Tab Font Active Color", "target" : "ul.tabs li", "showOnlyWhenPresent" : "ul.liveTabs .dontShow" }
+@tabsFontActive: #fff;
+
+// tweak: { "type" : "color", "category" : "Tabs", "title" : "Tab Color", "target" : "ul.liveTabs li a .tabIcon", "showOnlyWhenPresent" : "ul.liveTabs" }
+@tabBackColor: #4f555a;
+
+// tweak: { "type" : "color", "category" : "Tabs", "title" : "Tab Active Color", "target" : "ul.liveTabs li.active a .tabIcon", "showOnlyWhenPresent" : "ul.liveTabs" }
+@tabActiveBackColor: #b3d2ee;
+
+// tweak: { "type" : "color", "category" : "Tabs", "title" : "Tab Hover Color", "target" : "ul.liveTabs li.active a .tabIcon", "showOnlyWhenPresent" : "ul.liveTabs" }
+@tabHoverBackColor: #b3d2ee;
+
+/* Accordion
+---------------------------------------------------*/
+
+// tweak: { "type" : "font", "category" : "Accordion", "title" : "Accordion Font", "label" : "Font", "target" : "h4", "showOnlyWhenPresent" : ".accBlock" }
+.accHeading4-font {
+  font-family: Arial, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 19px;
+  line-height: 1.25em;
+  letter-spacing: 0em;
+  text-transform: none;
+}
+
+// tweak: { "type" : "color", "category" : "Accordion", "title" : "Accordion Font Color", "label" : "Font Color", "target" : "h4", "showOnlyWhenPresent" : ".accBlock" }
+@accHeading4Color: #666666;
+
+// tweak: { "type" : "color", "category" : "Accordion", "title" : "Accordion Background", "label" : "Background", "target" : ".accElement", "showOnlyWhenPresent" : ".accBlock" }
+@accBgColor: rgba(0,0,0,0);
+
+/* NOW BADGE
+---------------------------------------------------*/
+// tweak: { "type" : "checkbox", "title" : "hide-now-badge", "label" : "Hide Now Badge", "active": false, "target" : ".now-badge", "category" : "Site Badge" }
+.hide-now-badge .now-badge {
+  display: none;
+  visibility: hidden;
+}

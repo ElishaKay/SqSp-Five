@@ -98,7 +98,6 @@
       }
 
       #mobile-navigation-label {
-        background: @color;
         color: @background;
       }
     }  
@@ -148,7 +147,6 @@
       }
 
       #mobile-navigation-label {
-        background: @color;
         color: @background;
       }
     }  
@@ -176,7 +174,6 @@
 
     #mobile-navigation-label {
       color: @color;
-      background: @background;
       border-radius: @borderRadius;      
       cursor: pointer;
 

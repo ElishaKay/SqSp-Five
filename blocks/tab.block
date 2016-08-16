@@ -1,0 +1,49 @@
+<style>
+    .hide-page-title .title-desc-wrapper.no-description {
+        display: none;
+    }
+    .content-inner {
+        max-width: 95%;
+    }
+</style>
+<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+<div class="liveWrapper">
+    <squarespace:block-field id="sideContent-{collection.id}" label="Page Content" columns="1" class="tabSidebar" />
+    <div class="liveTabsWrapper">
+        <ul class="liveTabs">
+            {.repeated section items}
+            <li>
+                <a class="tabsTitle" href="#{customContent.tabName}">
+                    <img class="tabIcon" src="{customContent.tabHeadImg.assetUrl}" />
+                </a>
+            </li>
+            {.end}
+        </ul>
+        <br />
+        <div style="padding: 5px;height: 15px;color: rgba(0,0,0,0);"></div>
+        {.repeated section items}
+        <div id="{customContent.tabName}" class="tabsContent">
+            {body}
+        </div>
+        {.end}
+    </div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+      //When page loads...
+      $(".tabsContent").hide(); //Hide all content
+      $("ul.liveTabs li:first").addClass("active").show(); //Activate first tab
+      $(".tabsContent:first").show(); //Show first tab content
+      //On Click Event
+
+      $("ul.liveTabs li").click(function() {
+        $("ul.liveTabs li").removeClass("active"); //Remove any "active" class
+        $(this).addClass("active"); //Add "active" class to selected tab
+        $(".tabsContent").hide(); //Hide all tab content
+        var activeTab = $(this).find("a").attr("href"); //Find the href attribute value to identify the active tab + content
+        $(activeTab).fadeIn(); //Fade in the active ID content
+        return false;
+      });
+    });
+</script>
