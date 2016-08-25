@@ -28,8 +28,8 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 <script>
     $(document).ready(function() {
-        $('.accElement').click(function() {
-            $parent_box = $(this);
+        $('.accQuestion').click(function() {
+            $parent_box = $(this).parent();
             $parent_box.find('.accAnswer').toggleClass('activeAccAnswer');
             $parent_box.toggleClass('flipButton');
         });
