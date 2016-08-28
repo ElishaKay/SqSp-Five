@@ -1,7 +1,6 @@
-
-# Template - Five
-
-This is a modified template built from the Five Squarespace template.
+Template - Five
+=======
+>This is a modified template built from the Five Squarespace template.
 
 ### Features
 - [x] Built-in tabs
