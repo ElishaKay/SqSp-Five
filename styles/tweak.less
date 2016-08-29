@@ -1,3 +1,390 @@
+// FIVE TWEAK OPTIONS
+
+/* SITE WIDE */
+
+//tweak: { type: 'color', title: 'Site Background', target: 'body', category: 'Site Wide' }
+@bgColor: #F7F7F7;
+
+//tweak: { type: 'image', title: 'Site Background Image', target: 'body', category: 'Site Wide' }
+.bg-image {
+  background-image: url('/assets/groovepaper.png');
+  background-position: top left;
+  background-size: auto;
+  background-attachment: scroll;
+  background-repeat: repeat;
+}
+
+//tweak: { type: 'value', title: 'Site Width', min: 480, max: 1280, step: 10, target: '#page-body', property: 'width', category: 'Site Wide' }
+@siteWidth: 1020px;
+
+//tweak: { type: 'dropdown', title: 'Canvas Setting', options:[ 'Full Width', 'Site Width' ], default: 'Full Width', target: '#canvas', category: 'Site Wide' }
+
+//tweak: { type: 'value', title: 'Canvas Offset', min: 0, max: 200, step: 1, target: '#canvas', property: ['margin-top', 'margin-bottom'], category: 'Site Wide' }
+@cnvsOffset: 0px;
+
+//tweak: { type: 'value', title: 'Canvas Padding', min: 0, max: 200, step: 1, target: '.canvas-setting-site-width #canvas-wrapper, #sidebar-one, #sidebar-two', property: ['padding-left', 'padding-right'], category: 'Site Wide' }
+@cnvsPadding: 60px;
+
+//tweak: { type: 'value', title: 'Canvas Border Size', min: 0, max: 72, step: 1, target: '#canvas', category: 'Site Wide' }
+@cnvsBorderSize: 0px;
+
+//tweak: { type: 'color', title: 'Lines & Decorations', target: '#page-body', category: 'Site Wide' }
+@bordersColor: #E6E6E6;
+
+//tweak: { type: 'checkbox', title: 'Hide Delimiter', active: false, target: '.hentry .post, .article-meta, #navigation-top, #navigation-bottom', category: 'Site Wide' }
+
+
+/* HEADER */
+
+//tweak: { type: 'color', title: 'Header Background', target: '#banner-area-wrapper', category: 'Header' }
+@hdrBgColor: #7a7a7a;
+
+//tweak: { type: 'image', title: 'Header Background Image', target: '#banner-area-wrapper', category: 'Header', js: "true" }
+.hdr-bg-image {
+  background-image: url('/assets/extra_clean_paper.png');
+  background-position: center center;
+  background-size: auto;
+  background-attachment: fixed;
+  background-repeat: repeat;
+}
+
+//tweak: { type: 'font', title: 'Site Title', target: '#page-header, #site-title a', showOnlyWhenPresent: '.banner-content-site-title-logo-tagline', category: 'Header' }
+.site-title-font {
+  font-family: Georgia, Times, serif;
+  font-size: 72px;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 2px;
+  text-transform: none;
+  line-height: 1.25em;
+}
+@site-title-font-letter-spacing: 2px;
+
+//tweak: { type: 'color', title: 'Site Title Color', target: '#page-header, #site-title a, .horizontal-navigation-bar #site-title a', category: 'Header' }
+@siteTitleColor: #EBEBEB;
+
+//tweak: { type: 'color', title: 'Site Title Hover Color', target: '#page-header, #site-title a, .horizontal-navigation-bar #site-title a', category: 'Header' }
+@siteTitleHoverColor: #CFCFCF;
+
+//tweak: { type: 'font', title: 'Page Title', target: '#page-header, #page-title', category: 'Header' }
+.page-title-font {
+  font-family: Georgia, Times, serif;
+  font-size: 55px;
+  font-weight: 400;
+  font-style: italic;
+  letter-spacing: 2px;
+  text-transform: none;
+  line-height: 1.25em;
+}
+@page-title-font-letter-spacing: 2px;
+
+//tweak: { type: 'color', title: 'Page Title Color', target: '#page-header, #page-title', category: 'Header' }
+@pageTitleColor: #EBEBEB;
+
+//tweak: { type: 'font', title: 'Site Tagline', target: '#banner-area-wrapper, .site-subtitle, .logo-subtitle, .page-description', category: 'Header' }
+.tagline-font {
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+  font-weight: normal;
+  font-style: normal;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  line-height: 1.8em;
+}
+
+//tweak: { type: 'color', title: 'Site Tagline Color', target: '#page-header, .site-subtitle, .logo-subtitle, .page-description', category: 'Header' }
+@taglineColor: #CFCFCF;
+
+//tweak: { type: 'value', title: 'Banner Area Height', min: 0, max: 640, step: 1, target: '#banner-area-wrapper', showOnlyWhenPresent: '.banner-content-empty', category: 'Header' }
+@bannerAreaHeight: 440px;
+
+//tweak: { type: 'value', title: 'Banner Area Spacing', min: 0, max: 480, step: 1, target: '.banner-content-site-title-logo-tagline #banner-area-wrapper, .banner-content-page-title-description #banner-area-wrapper', property: ['padding-top', 'padding-bottom'], showOnlyWhenPresent: '.banner-content-page-title-description, .banner-content-site-title-logo-tagline', category: 'Header' }
+@bannerSpacing: 150px;
+
+//tweak: { type: 'value', title: 'Logo Height (Banner)', min: 25, max: 480, step: 1, target: '#banner-area-wrapper #banner', showOnlyWhenPresent: '.banner-content-site-title-logo-tagline', category: 'Header' }
+@logoHeightBanner: 100px;
+
+//tweak: { type: 'color', title: 'Banner Overlay Color', target: '#banner-area-wrapper #banner', category: 'Header' }
+@bannerOverlayColor: rgba(0,0,0,0);
+
+//tweak: { type: 'value', title: 'Banner Text Width', min: 25, max: 100, step: 5, target: '.site-subtitle, .logo-subtitle, .page-description', showOnlyWhenPresent: '.banner-content-page-title-description, .banner-content-site-title-logo-tagline' , category: 'Header'}
+@bannerTextWidth: 40%;
+
+//tweak: { type: 'dropdown', title: 'Banner Content', options:[ 'Site Title Logo Tagline', 'Page Title Description', 'Empty' ], default: 'Site Title Logo Tagline', target: '#banner-area-wrapper', category: 'Header' }
+
+//tweak: { type: 'dropdown', title: 'Banner Alignment', options:[ 'Left', 'Center', 'Right' ], default: 'Left', target: '#banner-area-wrapper', showOnlyWhenPresent: '.banner-content-page-title-description, .banner-content-site-title-logo-tagline', category: 'Header' }
+
+//tweak: { type: 'checkbox', title: 'Page Thumbnail as Banner', active: true, target: '#banner-area-wrapper', category: 'Header' }
+
+//tweak: { type: 'checkbox', title: 'Stretch Page Thumbnail', active: true, target: '#banner-area-wrapper', showOnlyWhenPresent: '.canvas-setting-full-width', category: 'Header' }
+
+
+/* NAVIGATION */
+
+//tweak: { type: 'color', title: 'Navigation Background', target: '#navigation-top, #navigation-bottom', category: 'Navigation' }
+@navBgColor: #FFFFFF;
+
+// Map mobile bg to nav bg
+@mobileNavBgColor: @navBgColor;
+
+//tweak: { type: 'font', title: 'Site Name', target: '.horizontal-navigation-bar, .horizontal-navigation-bar #site-title a', showOnlyWhenPresent: '.banner-content-page-title-description, .banner-content-empty', category: 'Navigation' }
+.site-name-font {
+  font-family: Georgia, Times, serif;
+  font-size: 21px;
+  font-weight: 400;
+  font-style: italic;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+@site-name-font-font-size: 21px;
+
+//tweak: { type: 'font', title: 'Navigation', target: '#navigation-top, #navigation-bottom', category: 'Navigation' }
+.nav-font {
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  letter-spacing: 0px;
+  text-transform: uppercase;
+}
+@nav-font-font-size: 14px;
+
+//tweak: { type: 'color', title: 'Navigation Link Color', target: '#navigation-top, #navigation-bottom', category: 'Navigation' }
+@navLinkColor: #CFCFCF;
+
+//tweak: { type: 'color', title: 'Navigation Link Hover Color', target: '#navigation-top, #navigation-bottom', category: 'Navigation' }
+@navLinkHoverColor: #666666;
+
+//tweak: { type: 'color', title: 'Navigation Active Link Color', target: '#navigation-top, #navigation-bottom', category: 'Navigation' }
+@navLinkActiveColor: #000000;
+
+//tweak: { type: 'value', title: 'Navigation Spacing', min: 0, max: 200, step: 1, target: '.horizontal-navigation-bar', property: ['padding-top', 'padding-bottom'], category: 'Navigation' }
+@navSpacing: 30px;
+
+//tweak: { type: 'value', title: 'Logo Height (Navigation)', min: 0, max: 480, step: 1, target: '.horizontal-navigation-bar #banner', showOnlyWhenPresent: '.banner-content-page-title-description, .banner-content-empty', category: 'Navigation' }
+@logoHeightNav: 90px;
+
+//tweak: { type: 'dropdown', title: 'Top Navigation Position', options:[ 'Above Banner', 'Below Banner', 'None' ], default: 'Above Banner', target: '#navigation-top, #navigation-bottom', category: 'Navigation' }
+
+//tweak: { type: 'dropdown', title: 'Top Navigation Alignment', options:[ 'Left', 'Center', 'Right' ], default: 'Left', target: '#navigation-top, #navigation-bottom', category: 'Navigation' }
+
+//tweak: { type: 'checkbox', title: 'Disable Navigation Border', active: false, target: '#navigation-bottom', showOnlyWhenPresent: '.top-navigation-position-below-banner', category: 'Navigation' }
+
+
+/* MAIN CONTENT */
+
+//tweak: { type: 'color', title: 'Canvas Background', target: '#canvas', category: 'Main Content' }
+@cnvsBgColor: #FFFFFF;
+
+//tweak: { type: 'image', title: 'Canvas Background Image', target: '#canvas', category: 'Main Content' }
+.cnvs-bg-image {
+  background-image: none;
+  background-position: top left;
+  background-size: auto;
+  background-attachment: scroll;
+  background-repeat: repeat;
+}
+
+//tweak: { type: 'font', title: 'Heading 1', target: 'h1:not(.page-title)', loadAllVariants: true, category: 'Main Content' }
+.heading1 {
+  font-family: Arial, sans-serif;
+  font-size: 30px;
+  font-weight: normal;
+  font-style: normal;
+  letter-spacing: 0px;
+  text-transform: none;
+  line-height: 1.8em;
+}
+@heading1-font-size: 30px;
+
+//tweak: { type: 'color', title: 'Heading 1 Color', target: 'h1:not(.page-title)', category: 'Main Content' }
+@heading1Color: #121212;
+
+//tweak: { type: 'font', title: 'Heading 2', target: 'h2', loadAllVariants: true, category: 'Main Content' }
+.heading2 {
+  font-family: Arial, sans-serif;
+  font-size: 21px;
+  font-weight: normal;
+  font-style: normal;
+  letter-spacing: 0px;
+  text-transform: none;
+  line-height: 1.35em;
+}
+@heading2-font-size: 21px;
+
+//tweak: { type: 'color', title: 'Heading 2 Color', target: 'h2', category: 'Main Content' }
+@heading2Color: #777777;
+
+//tweak: { type: 'font', title: 'Heading 3', target: 'h3', loadAllVariants: true, category: 'Main Content' }
+.heading3 {
+  font-family: Arial, sans-serif;
+  font-size: 17px;
+  font-weight: normal;
+  font-style: normal;
+  letter-spacing: 0px;
+  text-transform: uppercase;
+  line-height: 1.35em;
+}
+@heading3-font-size: 17px;
+
+//tweak: { type: 'color', title: 'Heading 3 Color', target: 'h3', category: 'Main Content' }
+@heading3Color: #999999;
+
+//tweak: { type: 'font', title: 'Body Text', target: '#page-body', loadAllVariants: true, category: 'Main Content' }
+.body-font {
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  letter-spacing: 0px;
+  line-height: 1.8em;
+}
+@body-font-font-size: 14px;
+
+//tweak: { type: 'color', title: 'Body Text Color', target: '#content-wrapper, .hentry .post, #sidebar-one, #sidebar-two, #page-footer', category: 'Main Content' }
+@textColor: #777777;
+
+//tweak: { type: 'color', title: 'Body Link Color', target: '#page-body-wrapper', category: 'Main Content' }
+@bodyLinkColor: #121212;
+
+//tweak: { type: 'color', title: 'Body Link Hover Color', target: '#page-body-wrapper', category: 'Main Content' }
+@bodyLinkHoverColor: #595959;
+
+//tweak: { type: 'font', title: 'Blockquote', target: 'blockquote', category: 'Main Content' }
+.quote-font {
+  font-family: Georgia, Times, serif;
+  font-size: 18px;
+  font-weight:normal;
+  font-style:italic;
+  letter-spacing:1px;
+  line-height: 1.5em;
+}
+
+//tweak: { type: 'value', title: 'Page Spacing', min: 0, max: 200, step: 1, target: '#page-body-wrapper', property: ['padding-top', 'padding-bottom'], category:'Main Content' }
+@pageSpacing: 60px;
+
+
+/* SIDEBAR */
+
+//tweak: { type: 'value', title: 'Sidebar 1 Width', min: 0, max: 480, step: 1, target: '#sidebar-one', property: 'width', showOnlyWhenPresent: '.one-sidebar, .two-sidebars, .split-sidebars', category: 'Sidebar' }
+@sidebar1Width: 270px;
+
+//tweak: { type: 'value', title: 'Sidebar 2 Width', min: 0, max: 480, step: 1, target: '#sidebar-two', property: 'width', showOnlyWhenPresent: '.two-sidebars, .split-sidebars', category: 'Sidebar' }
+@sidebar2Width: 230px;
+
+//tweak: { type: 'value', title: 'Sidebar Text Size', min: 0.50, max: 1, step: 0.05, target: '#sidebar-one, #sidebar-two', showOnlyWhenPresent: '.one-sidebar, .two-sidebars, .split-sidebars', category: 'Sidebar' }
+@sidebarTextSize: 0.85;
+
+//tweak: { type: 'dropdown', title: 'Sidebar Position', options:[ 'Right', 'Left' ], default: 'Right', target: '#content-wrapper, #sidebar-one, #sidebar-two', showOnlyWhenPresent: '.one-sidebar, .two-sidebars', category: 'Sidebar' }
+
+//tweak: { type: 'checkbox', title: 'Underline Sidebar h3', active: true, target: '#sidebar-one, #sidebar-two', showOnlyWhenPresent: '.one-sidebar, .two-sidebars, .split-sidebars', category: 'Sidebar' }
+
+//tweak: { type: 'checkbox', title: 'Site Description in Sidebar', active: false, target: '#sidebar-one', showOnlyWhenPresent: '.one-sidebar, .two-sidebars, .split-sidebars', category: 'Sidebar' }
+
+//tweak: { type: 'font', title: 'Site Description', target: '#page-header, .site-description', showOnlyWhenPresent: '.site-description-in-sidebar', loadAllVariants: true, category: 'Sidebar' }
+.site-desc-font {
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  font-weight: normal;
+  font-style: normal;
+  letter-spacing: 0px;
+  text-transform: none;
+  line-height: 1.8em;
+}
+
+//tweak: { type: 'color', title: 'Site Description Color', target: '.site-description', showOnlyWhenPresent: '.site-description-in-sidebar', category: 'Sidebar' }
+@siteDescColor: #CFCFCF;
+
+
+/* FOOTER */
+
+//tweak: { type: 'font', title: 'Footer Text', target: '#page-footer', loadAllVariants: true, category: 'Footer' }
+.footer-font {
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  font-weight: normal;
+  font-style: normal;
+  letter-spacing: 0px;
+  line-height: 1.8em;
+}
+
+//tweak: { type: 'dropdown', title: 'Footer Alignment', options:[ 'Left', 'Center', 'Right' ], default: 'Left', target: '#page-footer', category: 'Footer' }
+
+//tweak: { type: 'checkbox', title: 'Disable Footer Border', active: false, target: '#page-footer-wrapper', category: 'Footer' }
+
+
+/* SOCIAL ICONS */
+
+//tweak: { type:'value', title: 'Social Icon Size', min: 16, max: 48, step: 1, target: '#sqs-social', showOnlyWhenPresent: '.social-icon-placement-top-bottom, .social-icon-placement-top-only, .social-icon-placement-bottom-only', category: 'Social Icons' }
+@socialIconSize: 24px;
+
+// tweak:{ type: 'color', title: 'Social Icon Color', target: '#sqs-social', showOnlyWhenPresent: 'body:not(.tweak-template-social-icon-standard-color).social-icon-placement-top-bottom, body:not(.tweak-template-social-icon-standard-color).social-icon-placement-top-only, body:not(.tweak-template-social-icon-standard-color).social-icon-placement-bottom-only', category: 'Social Icons' }
+@socialIconColor: #999999;
+
+//tweak: { type: 'dropdown', title: 'Social Icon Style', options:[ 'Normal', 'Square', 'Round' ], default: 'Square', target: '#sqs-social', category: 'Social Icons' }
+
+//tweak: { type: 'dropdown', title: 'Social Icon Placement', options:[ 'Top Bottom', 'Top Only', 'Bottom Only', 'Hide' ], default: 'Hide', target: '#sqs-social', category: 'Social Icons' }
+
+// tweak: { "category" : "Social Icons", "title": "tweak-template-social-icon-standard-color", "label": "Standard Color", "type": "checkbox", "active": false, "showOnlyWhenPresent": "body:not(.social-icon-placement-hide)", "target": "#sqs-social"}
+
+
+
+/* BLOG */
+
+//tweak: { type: 'font', title: 'Meta Text', target: '.hentry .post, .article-meta', category: 'Blog' }
+.meta-font {
+  font-family: Arial, sans-serif;
+  font-size: 11px;
+  font-weight: normal;
+  font-style: normal;
+  letter-spacing: 0px;
+  line-height: 1.8em;
+}
+
+//tweak: { type: 'color', title: 'Meta Text Color', target: '.hentry .post, .article-meta, .article-byline, .article-dateline', category: 'Blog' }
+@metaTextColor: #CFCFCF;
+
+//tweak: { type: 'value', title: 'Article Spacing', min: 0, max: 200, step: 1, target: '.hentry .post', property: 'margin-bottom', showOnlyWhenPresent: '.collection-type-blog', category: 'Blog' }
+@articleSpacing: 60px;
+
+//tweak: { type: 'dropdown', title: 'Blog List Display', options:[ 'Full', 'Header and Footer Only', 'Header Only' ], default: 'Full', target: '.hentry .post', showOnlyWhenPresent: '.collection-type-blog', category: 'Blog' }
+
+//tweak: { type: 'dropdown', title: 'Blog Byline', options:[ 'Top', 'Bottom', 'Hidden' ], default: 'Bottom', target: '.hentry .post', showOnlyWhenPresent: '.collection-type-blog', category: 'Blog' }
+
+//tweak: { type: 'dropdown', title: 'Blog Dateline', options:[ 'Above Title', 'Top', 'Bottom', 'Hidden' ], default: 'Top', target: '.hentry .post', showOnlyWhenPresent: '.collection-type-blog', category: 'Blog' }
+
+//tweak: { type: 'font', title: 'Blog Pagination', target: 'nav.pagination', category: 'Blog' }
+.pagination-font {
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  letter-spacing: 0px;
+  text-transform: uppercase;
+}
+@pagination-font-font-size: 14px;
+
+//tweak: { type: 'color', title: 'Pagination Link Color', target: '.pagination', category: 'Blog' }
+@paginationLinkColor: #CFCFCF;
+
+//tweak: { type: 'color', title: 'Pagination Link Hover Color', target: '.pagination', category: 'Blog' }
+@paginationLinkHoverColor: #666666;
+
+//tweak: { type: 'color', title: 'Pagination Active Link Color', target: '.pagination', category: 'Blog' }
+@paginationLinkActiveColor: #000000;
+
+//tweak: { type: 'checkbox', title: 'Disable Pagination Border', active: true, target: '.pagination', showOnlyWhenPresent: '.collection-type-blog', category: 'Blog' }
+
+//tweak: { type: 'checkbox', title: 'Hide Excerpt Thumbnail', active: false, target: '.view-list .hentry .excerpt-thumb', showOnlyWhenPresent: '.collection-type-blog', category: 'Blog' }
+
+//tweak: { type: 'checkbox', title: 'Hide Icons', active: false, target: '.hentry .post, .article-meta', showOnlyWhenPresent: '.collection-type-blog', category: 'Blog' }
+
+//tweak: { type: 'checkbox', title: 'Hide Tags Categories', active: false, target: '.hentry .post, .article-meta', showOnlyWhenPresent: '.collection-type-blog', category: 'Blog' }
+
+/* Products */
+
+// tweak: { "category" : "Products", "type" : "checkbox", "title" : "Show Products Category Navigation", "label" : "Show Category Navigation", "target" : ".collection-type-products #categoryNav", "showOnlyWhenPresent" : ".collection-type-products", "active" : "false" }
+
 /* TABS
 ---------------------------------------------------*/
 
@@ -54,3 +441,41 @@
   display: none;
   visibility: hidden;
 }
+
+
+// --------------------------------------------
+// SVG Icon in Templates
+// For use in templates where social icons are
+// hard coded.
+// --------------------------------------------
+
+// Wrapper Class for SVG Icons
+@social-icons-wrapper: 'social-links';
+
+// Set Icon Custom Color Name from TWEAK
+@social-icons-color: @socialIconColor;
+
+// Set Class name from Standard Color Checkbox
+@social-icons-standard-color: 'tweak-template-social-icon-standard-color';
+
+// Set Icon Size Class Name from TWEAK
+@social-icons-size-custom: @socialIconSize;
+
+// Set Icon Style Class Names from TWEAK
+@social-icons-style-regular:            'social-icon-style-normal';
+@social-icons-style-circle--knockout:   'social-icon-style-round';
+@social-icons-style-rounded--knockout:  'social-icon-style-square';
+
+// These are not in this template, but need to be here or the mixins
+// in svg-icon-templates.less freak out.
+@social-icons-style-circle--border:     'tweak-template-social-icon-style-circle-border';
+@social-icons-style-circle--solid:      'tweak-template-social-icon-style-circle-solid';
+@social-icons-style-square--border:     'tweak-template-social-icon-style-square-border';
+@social-icons-style-square--knockout:   'tweak-template-social-icon-style-square-knockout';
+@social-icons-style-square--solid:      'tweak-template-social-icon-style-square-solid';
+@social-icons-style-rounded--border:    'tweak-template-social-icon-style-rounded-border';
+@social-icons-style-rounded--solid:     'tweak-template-social-icon-style-rounded-solid';
+
+@import 'svg-icon-templates';
+
+
