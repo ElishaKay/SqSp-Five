@@ -76,54 +76,59 @@ ul.liveTabs {
 /* Accordion styles
 -------------------------------------------------*/ 
 .accElement {
-    padding: 2em 0;
-    border-bottom: 1px solid #EDEEEE;
-    position: relative;
-    color: @accHeading4Color;
-    background: @accBgColor;
-    
-    &:after {
-        font-family: 'squarespace-ui-font';
-        -webkit-font-smoothing: antialiased;
-        content: "\e02d";
-        position: absolute;
-        top: 2em;
-        right: 1em;
-        font-size: 1em;
-        font-weight: bold;
-        -webkit-transform: rotate(90deg);
-        -ms-transform: rotate(90deg);
-        transform: rotate(90deg);
-        cursor: pointer;
-    }
+  padding: 2em 0;
+  border-bottom: 1px solid #EDEEEE;
+  position: relative;
+  color: @accHeading4Color;
+  background: @accBgColor;
 }
-.flipButton:after {
+.accQuestion {
+	.accHeading4-font;
+  cursor: pointer;
+  margin: 0;
+  padding-right: 2em;
+
+  &:after {
+    font-family: 'squarespace-ui-font';
+    -webkit-font-smoothing: antialiased;
+    content: "\e02d";
+    position: absolute;
+    top: 2em;
+    right: 1em;
+    font-size: 1em;
+    font-weight: bold;
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+    cursor: pointer;
+    -webkit-transition: transform 0.25s ease;
+    -ms-transition: transform 0.25s ease;
+    transition: transform 0.25s ease;
+  }
+
+  &.flipButton:after {
     -webkit-transform: rotate(270deg);
     -ms-transform: rotate(270deg);
     transform: rotate(270deg);
-}
-.accQuestion {
-		.accHeading4-font;
-    cursor: pointer;
-    margin: 0;
-    padding-right: 2em;
+  }
 }
 .accAnswer {
-    margin: 0;
-    max-height: 0;
-    overflow-y: hidden;
-    -webkit-transition: all .25s;
-    -moz-transition: all .25s;
-    transition: all .25s;
-    -webkit-transition-timing-function: ease-out;
-    -moz-transition-timing-function: ease-out;
-    transition-timing-function: ease-out;
-    padding-right: 2em;
+  margin: 0;
+  max-height: 0;
+  overflow-y: hidden;
+  -webkit-transition: all .25s;
+  -moz-transition: all .25s;
+  transition: all .25s;
+  -webkit-transition-timing-function: ease-out;
+  -moz-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+  padding-right: 2em;
 }
 .activeAccAnswer {
-    margin-top: 1.5em;
-    max-height: none;
+  margin-top: 1.5em;
+  max-height: none;
 }
+
 /* Now Badge */
 .now-badge {
   text-align: center;

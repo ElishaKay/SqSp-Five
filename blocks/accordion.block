@@ -1,15 +1,16 @@
+{# Styles to fix a placeholder image being placed in the banner.}
 <style>
-    .hide-page-title .title-desc-wrapper.no-description {
-        display: none;
-    }
-</style>
-
-<!-- To fix sizing issue on mobile -->
-<style>
+  .hide-page-title .title-desc-wrapper.no-description {
+    display: none;
+  }
   @media only screen and (max-width: 640px) { h1 {font-size:2em; word-wrap:normal;}}
 </style>
-<!-- COLLAPSIBLE TEXT WITH OPEN ALL/CLOSE ALL LINK -->
+
+{# Title Area}
 <squarespace:block-field id="accordion-{collection.id}" label="Title Area" columns="12" />
+{# End Title Area}
+
+{# Accordion Block}
 <div class="accBlock">
     <div class="expandingAcc">
         {.repeated section items}
@@ -24,6 +25,9 @@
         {.end}
     </div>
 </div>
+{# End Accordion Block}
+
+{# Accordion Scripts}
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 <script>
@@ -31,7 +35,8 @@
         $('.accQuestion').click(function() {
             $parent_box = $(this).parent();
             $parent_box.find('.accAnswer').toggleClass('activeAccAnswer');
-            $parent_box.toggleClass('flipButton');
+            $(this).toggleClass('flipButton');
         });
 });
 </script>
+{# End Accordion Scripts}
