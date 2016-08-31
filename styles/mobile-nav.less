@@ -52,11 +52,7 @@
 
   body,
   (~"@{mobileEl}") {
-    -webkit-transition: left 0.3s ease-out;
-    -moz-transition: left 0.3s ease-out;
-    -ms-transition: left 0.3s ease-out;
-    -o-transition: left 0.3s ease-out;
-    transition: left 0.3s ease-out;  
+    .transition(left 0.3s ease-out);
   }  
 
   body {
@@ -110,11 +106,7 @@
 #sqs-mobile-nav(slide-down, @standardEl: '#main-navigation', @mobileEl: '#mobile-navigation', @minWidth: 30em, @background: orange, @color: white, @borderRadius: 0px, @label: 'Menu', @closeLabel: 'Menu') {
 
   (~"@{mobileEl}") {
-    -webkit-transition: top 0.3s ease-out;
-    -moz-transition: top 0.3s ease-out;
-    -ms-transition: top 0.3s ease-out;
-    -o-transition: top 0.3s ease-out;
-    transition: top 0.3s ease-out;  
+    .transition(top 0.3s ease-out);  
   }  
 
   (~"@{mobileEl}") {
@@ -164,17 +156,14 @@
   (~"@{mobileEl}") {
     display: none;
     cursor: pointer;
-    border-radius: @borderRadius;
-    background: @background;    
+    .border-radius(@borderRadius);
+    background: @background;
 
-    -moz-user-select: -moz-none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+    .user-select(none);
 
     #mobile-navigation-label {
       color: @color;
-      border-radius: @borderRadius;      
+      .border-radius(@borderRadius);    
       cursor: pointer;
 
       &:after {
