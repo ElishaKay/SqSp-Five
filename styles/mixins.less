@@ -1,0 +1,95 @@
+/*=================================================
+
+  Mixins
+
+=================================================*/
+
+.flex-box() {
+  display: -webkit-flex;
+  display:     -ms-flex;
+  display:         flex;
+}
+
+.flex-flow(@row, @wrap) {
+  -webkit-flex-flow: @row @wrap;
+      -ms-flex-flow: @row @wrap;
+          flex-flow: @row @wrap;
+}
+
+.flex(@flexnum) {
+  -webkit-flex: @flexnum;
+      -ms-flex: @flexnum;
+          flex: @flexnum;
+}
+
+.border-box() {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+      -ms-box-sizing: border-box;
+       -o-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.box-shadow(@shadow-args) {
+	-webkit-box-shadow: @shadow-args;
+  	 -moz-box-shadow: @shadow-args;
+	        box-shadow: @shadow-args;
+}
+
+.transition(@transition) {
+  -webkit-transition: @transition;
+     -moz-transition: @transition;
+      -ms-transition: @transition;
+       -o-transition: @transition;
+          transition: @transition;
+}
+
+.transform(@string){
+	-webkit-transform: @string;
+   	 -moz-transform: @string;
+    	-ms-transform: @string;
+    	 -o-transform: @string;
+        	transform: @string;
+}
+
+.perspective(@value: 1000) {
+	-webkit-perspective: @value;
+  	 -moz-perspective: @value;
+    	-ms-perspective: @value;
+        	perspective: @value;
+}
+
+.transform-origin(@x:center, @y:center) {
+	-webkit-transform-origin: @x @y;
+  	 -moz-transform-origin: @x @y;
+    	-ms-transform-origin: @x @y;
+    	 -o-transform-origin: @x @y;
+          transform-origin: @x @y;
+}
+.user-select(@us-prop) {
+  -webkit-user-select: @us-prop;
+     -moz-user-select: -moz-@us-prop;
+      -ms-user-select: @us-prop;
+          user-select: @us-prop;
+}
+.border-radius(@radius) {
+  -webkit-border-radius: @radius;
+     -moz-border-radius: @radius;
+          border-radius: @radius;
+}
+
+/** Video Background Mixins */
+.mixin-sqs-video-background-transition(@transition) {
+  -webkit-transition: @transition;
+  -moz-transition: @transition;
+  -ms-transition: @transition;
+  -o-transition: @transition;
+  transition: @transition;
+}
+
+.mixin-sqs-video-background-transform(@transform) {
+  -webkit-transform: @transform;
+  -moz-transform: @transform;
+  -ms-transform: @transform;
+  transform: @transform;
+}
