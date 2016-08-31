@@ -1,76 +1,79 @@
-// Add Custom Code Here
+/*=================================================
 
+  Custom Styles
+
+=================================================*/
 /* TABS */
 .liveWrapper {
-    margin: 0 auto;
-    min-height: 400px;
+  margin: 0 auto;
+  min-height: 400px;
     
-    .tabSidebar {
-        float: left;
-        width: 49%;
-        padding-right: 1%;
-    }
+  .tabSidebar {
+    float: left;
+    width: 49%;
+    padding-right: 1%;
+  }
     
-    .liveTabsWrapper {
-        display: inline-block;
-        width: 49%;
-        padding-left: 1%;
-    }
+  .liveTabsWrapper {
+    display: inline-block;
+    width: 49%;
+    padding-left: 1%;
+  }
 }
 ul.liveTabs {
-    list-style: none;
-    display: block;
-    padding: 2px;
-    text-align: center;
+  list-style: none;
+  display: block;
+  padding: 2px;
+  text-align: center;
     
-    li {
-        display: inline-block;
-        text-align: center;
-        .tabsFont;
+  li {
+    display: inline-block;
+    text-align: center;
+    .tabsFont;
         
-        &.active a {
-            outline: none;
-            color: @tabsFontActive;
+    &.active a {
+      outline: none;
+      color: @tabsFontActive;
             
-            .tabIcon {
-                outline: none;
-                background: @tabActiveBackColor;
-            }
+      .tabIcon {
+        outline: none;
+        background: @tabActiveBackColor;
+      }
             
-            &:focus, &:active, &:hover {
-                outline: none;
-            }
-        }
-        
-        a {
-            outline: none;
-            color: @tabsFontColor;
-            
-            .tabIcon {
-                outline: none;
-                padding: 15px;
-                background: @tabBackColor;
-                border-top-left-radius: 10px;
-                border-top-right-radius: 10px;
-                cursor: pointer;
-                height: 48px;
-                width: 48px;
-                
-                &:hover {
-                    background: @tabHoverBackColor;
-                }
-            }
-            
-            &:hover {
-                outline: none;
-                color: @tabsFontActive;
-            }
-            
-            &:focus, &:active {
-                outline: none;
-            }
-        }
+      &:focus, &:active, &:hover {
+        outline: none;
+      }
     }
+        
+    a {
+      outline: none;
+      color: @tabsFontColor;
+          
+      .tabIcon {
+        outline: none;
+        padding: 15px;
+        background: @tabBackColor;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        cursor: pointer;
+        height: 48px;
+        width: 48px;
+                
+        &:hover {
+          background: @tabHoverBackColor;
+        }
+      }
+            
+      &:hover {
+        outline: none;
+        color: @tabsFontActive;
+      }
+            
+      &:focus, &:active {
+        outline: none;
+      }
+    }
+  }
 }
 
 /* Accordion styles
@@ -97,31 +100,20 @@ ul.liveTabs {
     right: 1em;
     font-size: 1em;
     font-weight: bold;
-    -webkit-transform: rotate(90deg);
-    -ms-transform: rotate(90deg);
-    transform: rotate(90deg);
+    .transform(rotate(90deg));
     cursor: pointer;
-    -webkit-transition: transform 0.25s ease;
-    -ms-transition: transform 0.25s ease;
-    transition: transform 0.25s ease;
+    .transition(transform 0.25s ease);
   }
 
   &.flipButton:after {
-    -webkit-transform: rotate(270deg);
-    -ms-transform: rotate(270deg);
-    transform: rotate(270deg);
+    .transform(rotate(270deg));
   }
 }
 .accAnswer {
   margin: 0;
   max-height: 0;
   overflow-y: hidden;
-  -webkit-transition: all .25s;
-  -moz-transition: all .25s;
-  transition: all .25s;
-  -webkit-transition-timing-function: ease-out;
-  -moz-transition-timing-function: ease-out;
-  transition-timing-function: ease-out;
+  .transition(all .25s ease-out);
   padding-right: 2em;
 }
 .activeAccAnswer {
