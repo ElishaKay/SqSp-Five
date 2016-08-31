@@ -7,8 +7,7 @@
 </style>
 
 {# Title Area}
-<squarespace:block-field id="accordion-{collection.id}" label="Title Area" columns="12" />
-{# End Title Area}
+<squarespace:block-field id="accordion-{collection.id}" label="Title Area" columns="12" />{# End Title Area}
 
 {# Accordion Block}
 <div class="accBlock">
@@ -24,19 +23,17 @@
         </div>
         {.end}
     </div>
-</div>
-{# End Accordion Block}
+</div>{# End Accordion Block}
 
 {# Accordion Scripts}
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 <script>
-    $(document).ready(function() {
-        $('.accQuestion').click(function() {
-            $parent_box = $(this).parent();
-            $parent_box.find('.accAnswer').toggleClass('activeAccAnswer');
-            $(this).toggleClass('flipButton');
-        });
-});
-</script>
-{# End Accordion Scripts}
+  $(document).ready(function() {
+    $('.accQuestion').click(function() {
+      $parent_box = $(this).parent();
+      $parent_box.find('.accAnswer').toggleClass('activeAccAnswer');
+      $(this).toggleClass('flipButton');
+    });
+  });
+</script>{# End Accordion Scripts}
