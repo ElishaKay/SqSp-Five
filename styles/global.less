@@ -148,8 +148,7 @@ nav ul, nav ol { margin: 0; }
 // Text shrink
 .js-text-shrink {
   width: 100%;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
+  .border-box();
 }
 
 
@@ -810,7 +809,7 @@ body.top-navigation-position-none {
     a { display: block; }
     ul li ul { margin-bottom: 1em; display: block; }
     ul li ul li { display: block; text-indent: 0.5em; *zoom: 1; }
-    ul li.folder .subnav { max-height: 0; overflow: hidden; -webkit-transition: max-height 0.50s; -moz-transition: max-height 0.50s; -ms-transition: max-height 0.50s; transition: max-height 0.50s; }
+    ul li.folder .subnav { max-height: 0; overflow: hidden; .transition(max-height 0.50s); }
     ul li.folder:hover .subnav { max-height: 9999px; overflow: visible; }
   }
 }
