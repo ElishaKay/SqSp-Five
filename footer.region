@@ -19,12 +19,12 @@
 		        {.end}
 		        <squarespace:block-field id="footer-blocks" columns="12" label="Footer Content" />
 		        <div id="now-badge" class="now-badge">
-              <a href="http://www.nowstreamingservices.com" target="_blank">
-                <p class="now-badge-content">
+              <p class="now-badge-content">
+                <a href="http://www.nowstreamingservices.com" target="_blank">
                   Powered by
                   <img src="/assets/img/nowLogo_small.png" alt="Now Streaming Services" />
-                </p>
-              </a>
+                </a>
+              </p>
             </div>
 		      </div>
 		    </div><!-- page-footer-wrapper -->
