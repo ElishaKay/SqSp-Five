@@ -22,7 +22,7 @@
       <li>
 
       {.passthrough?}
-        <a class="tabsTitle" href="{sourceUrl}">
+        <a class="tabsTitle" href="{sourceUrl}" target="_blank">
           <img class="tabIcon" src="{customContent.tabHeadImg.assetUrl}" />
         </a>
       {.or}
