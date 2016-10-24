@@ -1,13 +1,12 @@
-{# Styles to fix a placeholder image being placed in the banner.}
+
+{# Hide any banner image and fix mobile styling }
 <style>
-  .hide-page-title .title-desc-wrapper.no-description {
-    display: none;
-  }
+  .hide-page-title .title-desc-wrapper.no-description {display: none;}
   @media only screen and (max-width: 640px) { h1 {font-size:2em; word-wrap:normal;}}
 </style>
 
-{# Title Area}
-<squarespace:block-field id="accordion-{collection.id}" label="Title Area" columns="12" />{# End Title Area}
+{# Title Content Area}
+<squarespace:block-field id="accordion-{collection.id}" label="Title Area" columns="12" />
 
 {# Accordion Block}
 <div class="accBlock">
@@ -23,4 +22,7 @@
         </div>
         {.end}
     </div>
-</div>{# End Accordion Block}
+</div>
+
+{# Load bootstrap java }
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
