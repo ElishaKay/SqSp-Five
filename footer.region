@@ -34,27 +34,24 @@
 		</div> <!-- canvas-wrapper -->
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
-    {# Tab Scripts}
     <script type="text/javascript">
-        $(document).ready(function() {
-          //When page loads...
-          $(".tabsContent").hide(); //Hide all content
-          $("ul.liveTabs li:first").addClass("active").show(); //Activate first tab
-          $(".tabsContent:first").show(); //Show first tab content
-          //On Click Event
+      $(document).ready(function() {
+        //When page loads...
+        $(".tabsContent").hide(); //Hide all content
+        $("ul.liveTabs li:first").addClass("active").show(); //Activate first tab
+        $(".tabsContent:first").show(); //Show first tab content
+        //On Click Event
 
-          $("ul.liveTabs li").click(function() {
-            $("ul.liveTabs li").removeClass("active"); //Remove any "active" class
-            $(this).addClass("active"); //Add "active" class to selected tab
-            $(".tabsContent").hide(); //Hide all tab content
-            var activeTab = $(this).find("a").attr("href"); //Find the href attribute value to identify the active tab + content
-            $(activeTab).fadeIn(); //Fade in the active ID content
-            return false;
-          });
+        $("ul.liveTabs li").click(function() {
+          $("ul.liveTabs li").removeClass("active"); //Remove any "active" class
+          $(this).addClass("active"); //Add "active" class to selected tab
+          $(".tabsContent").hide(); //Hide all tab content
+          var activeTab = $(this).find("a").attr("href"); //Find the href attribute value to identify the active tab + content
+          $(activeTab).fadeIn(); //Fade in the active ID content
+          return false;
         });
-    </script>{# End Tab Scripts}
-    {# Accordion Scripts}
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+      });
+    </script>
     <script>
       $(document).ready(function() {
         $('.accQuestion').click(function() {
@@ -63,8 +60,7 @@
           $(this).toggleClass('flipButton');
         });
       });
-    </script>{# End Accordion Scripts}
-
+    </script>
 
 		{squarespace-footers}
 
